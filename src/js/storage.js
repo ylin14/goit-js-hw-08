@@ -21,4 +21,4 @@ const save = (key, value) => {
     load,
   };
 
-  export { save, load };
+  export {save, load};

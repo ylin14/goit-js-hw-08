@@ -9,8 +9,7 @@ console.log(galleryItems);
 const ref = {
     gallery: document.querySelector('.gallery'),
   };
-
-
+  
   function createGalleryMarkup(arr) {
     return arr
       .map(
