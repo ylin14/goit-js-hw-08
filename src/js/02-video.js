@@ -1,4 +1,5 @@
 import Player from '@vimeo/player';
+import { save, load } from "./storage";
 
 // 1. Ініціалізувати плєр.
 // 2. Методом on() відстежити подію "timeupdate".
@@ -10,12 +11,13 @@ import Player from '@vimeo/player';
 
 const CURRENT_TIME = "videoplayer-current-time";
 
-const iframe = document.querySelector('iframe');
-const player = new Vimeo.Player(iframe);
+function onTimeUpdate (data) {
 
-player.on('play', function() {
-    console.log('played the video!');
-});
+}
+
+player.on('timeupdate', onTimeUpdate);
+
+
 
 
 
