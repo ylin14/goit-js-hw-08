@@ -9,6 +9,8 @@ import { save, load } from "./storage";
 // 6. Оновлювати час відтворення у сховищі не частіше, ніж раз на секунду.
 // aria-valuenow атрибут, який показує час відео.
 
+
+
 const CURRENT_TIME = "videoplayer-current-time";
 
 function onTimeUpdate (data) {
