@@ -29,7 +29,7 @@ function addObjToLocalStorage (obj) {
 
 function getSavedData () {
     const savedData = localStorage.getItem(STORAGE_KEY);
-    
+
     if(!savedData) {
         return {
             email: "",
@@ -38,7 +38,7 @@ function getSavedData () {
     }
 
     return JSON.parse(savedData);
-    
+
 }
 
 function setDataToForm () {
@@ -49,7 +49,11 @@ function setDataToForm () {
 
 function onFormSubmit(e) {
     e.preventDefault();
-    console.log(getSavedData ());
+    if(!emailRef.value || !messageRef.value) {
+      return alert("All fields must be fulfilled")
+    }
+
+  console.log(getSavedData ());
 
     emailRef.value = "";
     messageRef.value = "";
